@@ -1,7 +1,7 @@
 # Deploy com Docker Compose
 
 Pré-requisitos
-1. DNS A para `onpprod.site` e `www.onpprod.site` apontando para `163.176.131.109`.
+1. DNS A para `onpprod.site` e `www.onpprod.site`.
 2. Portas `80` e `443` liberadas no firewall do servidor.
 3. Docker e Docker Compose (plugin) instalados no servidor.
 
