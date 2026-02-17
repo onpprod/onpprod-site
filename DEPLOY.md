@@ -7,12 +7,11 @@ Pré-requisitos
 
 Passos
 1. Copie o projeto para o servidor.
-2. Crie o arquivo `.env` a partir de `.env.example` e ajuste os valores.
-3. Torne o script executavel: `chmod +x deploy/deploy.sh`.
-4. Rode o deploy completo com Let's Encrypt: `EMAIL=seu@email.com ./deploy/deploy.sh`.
+2. Torne o script executavel: `chmod +x deploy/deploy.sh`.
+3. Rode o deploy completo com Let's Encrypt: `EMAIL=seu@email.com ./deploy/deploy.sh`.
    - Opcional: `DOMAIN=onpprod.site` e `STAGING=1` para testes.
 
 Notas
 1. Se o certificado ja existir, o script apenas sobe os containers.
 2. Para ambiente de teste, use `STAGING=1` para evitar limite de emissao.
-3. Para alterar dominio ou IP, atualize `DJANGO_ALLOWED_HOSTS`, `DJANGO_CSRF_TRUSTED_ORIGINS` e `nginx/conf.d/onpprod.conf`.
+3. Para alterar dominio ou IP, atualize `nginx/conf.d/onpprod.conf`.

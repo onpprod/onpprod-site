@@ -11,11 +11,6 @@ if [ -z "$EMAIL" ]; then
   exit 1
 fi
 
-if [ ! -f ".env" ]; then
-  echo "Arquivo .env nao encontrado. Crie a partir de .env.example."
-  exit 1
-fi
-
 if [ "$STAGING" -ne 0 ]; then
   STAGING_ARG="--staging"
 else
@@ -23,8 +18,6 @@ else
 fi
 
 docker compose build
-
-docker compose run --rm --user root web sh -c "mkdir -p /app/data /app/staticfiles && chown -R appuser:appuser /app/data /app/staticfiles"
 
 if docker compose run --rm --entrypoint "test -f /etc/letsencrypt/live/$DOMAIN/fullchain.pem" certbot; then
   echo "Certificado existente detectado para $DOMAIN."
