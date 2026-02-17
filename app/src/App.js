@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import EditorPage from './pages/EditorPage';
+import BidsMonitorPage from './pages/BidsMonitorPage';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/editor" element={<EditorPage />} />
+          <Route path="/monitor-licitacoes" element={<BidsMonitorPage />} />
         </Routes>
       </BrowserRouter>
     </div>

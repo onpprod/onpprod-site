@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import EditorWorkspace from '../editor/EditorWorkspace';
 
-const EditorPage = () => (
+const BidsMonitorPage = () => (
   <main className="page editor">
     <header className="page-header">
       <Link className="brand-link" to="/">
@@ -9,11 +8,10 @@ const EditorPage = () => (
       </Link>
       <div className="page-header-meta">
         <span className="section-eyebrow">AAS Workspace</span>
-        <h2>Editor de AAS</h2>
+        <h2>Monitor de Licitações</h2>
       </div>
     </header>
-    <EditorWorkspace />
   </main>
 );
 
-export default EditorPage;
+export default BidsMonitorPage;
