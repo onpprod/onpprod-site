@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+
+:root {
+  --night: #0b0d12;
+  --ink: #141824;
+  --paper: #f4f6fb;
+  --steel: #2f3a4a;
+  --blue: #2f6bff;
+  --azure: #61d4ff;
+  --magenta: #ff3d8a;
+  --lemon: #ffd84d;
+  --shadow: rgba(9, 15, 30, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--paper);
+  background: radial-gradient(circle at 15% 15%, #1c2231 0%, var(--night) 55%, #07090d 100%);
+  font-family: 'Sora', 'Trebuchet MS', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Sora', 'Trebuchet MS', sans-serif;
+  }
+}
+
+#root {
+  min-height: 100%;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
